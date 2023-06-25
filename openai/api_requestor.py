@@ -663,6 +663,7 @@ class APIRequestor:
             "data": data,
             "proxy": _aiohttp_proxies_arg(openai.proxy),
             "timeout": timeout,
+            "params": openai.http_params,
         }
         try:
             result = await session.request(**request_kwargs)

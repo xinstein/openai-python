@@ -52,6 +52,7 @@ api_version = os.environ.get(
     "OPENAI_API_VERSION",
     ("2023-05-15" if api_type in ("azure", "azure_ad", "azuread") else None),
 )
+http_params = {} # added by Xavier. To support pass extra http param for some proxies.
 verify_ssl_certs = True  # No effect. Certificates are always verified.
 proxy = None
 app_info = None
